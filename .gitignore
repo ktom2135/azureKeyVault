@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AzureKeyVaultTest/v16
+/AzureKeyVaultTest/bin/Debug
+/AzureKeyVaultTest/obj/Debug/AzureKeyVaultTest.csproj.CopyComplete
+/AzureKeyVaultTest/obj/Debug
+/packages
