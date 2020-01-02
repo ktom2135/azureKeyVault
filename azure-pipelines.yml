@@ -15,6 +15,8 @@ stages:
 - stage: Test
   jobs:
   - job: TestOnWindows
+    pool:
+      vmImage: vs2017-win2016
     steps:
     - script: echo Testing on Windows!
   - job: TestOnLinux
@@ -25,18 +27,3 @@ stages:
   - job: Deploy
     steps:
     - script: echo Deploying the code!
-- stage: More Jobs
-  jobs:
-  # track deployments on the environment
-  - deployment: DeployWeb
-  displayName: deploy Web App
-  pool:
-      vmImage: 'Ubuntu-16.04'
-  # creates an environment if it doesn't exist
-  environment: 'smarthotel-dev'
-  strategy:
-      # default deployment strategy, more coming...
-      runOnce:
-      deploy:
-          steps:
-          - script: echo my first deployment
